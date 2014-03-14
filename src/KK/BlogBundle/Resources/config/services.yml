@@ -1,0 +1,12 @@
+parameters:
+#    kk_blog.example.class: KK\BlogBundle\Example
+
+services:
+    kk.blog.admin:
+        class: KK\BlogBundle\Admin\BlogAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: blog, label: Blogs }
+        arguments:
+            - ~
+            - KK\BlogBundle\Entity\Blog
+            - 'KKBlogBundle:BlogAdmin'

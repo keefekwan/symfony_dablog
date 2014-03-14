@@ -1,0 +1,43 @@
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+login:
+    path: /login
+    defaults: { _controller: KKBlogBundle:Login:login }
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout
+
+kk_blog_homepage:
+    path: /
+    defaults: { _controller: KKBlogBundle:Page:index }
+    requirements:
+        _method:  GET
+
+kk_blog_about:
+    path: /about
+    defaults: { _controller:KKBlogBundle:Page:about }
+    requirements:
+        _method:  GET
+
+kk_blog_show:
+    path: /{id}/{slug}
+    defaults: { _controller:KKBlogBundle:Blog:show }
+    requirements:
+        _method:  GET
+        id: \d+
+
+kk_blog_sidebar:
+    path:  /sidebar
+    defaults: { _controller:KKBlogBundle:Blog:sidebar }
+    requirements:
+        _method:  GET
