@@ -72,6 +72,26 @@ class BlogFixtures extends AbstractFixture implements OrderedFixtureInterface
         $blog6->setUpdated($blog6->getCreated());
         $em->persist($blog6);
 
+        $blog7 = new Blog();
+        $blog7->setTitle('Tears in the rain');
+        $blog7->setBlog('I\'ve seen things you people wouldn\'t believe. Attack ships on fire off the shoulder of Orion. I\'ve watched C-beams glitter in the dark near the Tannhauser Gate. All those moments will be lost in time, like tears in rain. Time to die.');
+        $blog7->setImage('532241bb274ea.jpeg');
+        $blog7->setAuthor('KK');
+        $blog7->setTags('bladerunner, runner, Tannhauser, Gate, replicant, nexus 6, rain, tears, retirement, lifespan, combat model, memories, Voigt-Kampff');
+        $blog7->setCreated(new \DateTime("2014-03-13 16:38:01"));
+        $blog7->setUpdated($blog7->getCreated());
+        $em->persist($blog7);
+
+        $blog8 = new Blog();
+        $blog8->setTitle('In the Mind\'s Eye');
+        $blog8->setBlog('The computer-generated information superhighway could launch a new renaissance of creativity for millions of visual thinkers! Some of the greatest minds in politics, science, literature, and the arts experienced undetected learning disabilities that stopped them from assimilating information the same way as their peers. Some of our most original intellects Albert Einstein, Thomas Edison, Lewis Carroll, and Winston Churchill relied heavily on visual modes of thought, processing information in terms of images instead of words or numbers.');
+        $blog8->setImage('53224271d4e29.jpeg');
+        $blog8->setAuthor('KK');
+        $blog8->setTags('minds, eye, thinkers, fortune teller, seeing, dablog');
+        $blog8->setCreated(new \DateTime("2014-01-05 04:25:12"));
+        $blog8->setUpdated($blog8->getCreated());
+        $em->persist($blog8);
+
         $em->flush();
     }
 

@@ -1,5 +1,3 @@
 kk_blog:
     resource: "@KKBlogBundle/Resources/config/routing.yml"
     prefix:   /
-
-
