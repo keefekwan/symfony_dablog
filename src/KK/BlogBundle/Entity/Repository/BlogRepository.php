@@ -73,4 +73,14 @@ class BlogRepository extends EntityRepository
 
         return $tagWeights;
     }
+
+    public function getPostsByTags($tag)
+    {
+        $query = $this->createQueryBuilder('b')
+            ->where('b.tags like :tag')
+            ->setParameter('tag', '%'.$tag.'%');
+
+        return $query->getQuery()->getResult();
+    }
+
 }

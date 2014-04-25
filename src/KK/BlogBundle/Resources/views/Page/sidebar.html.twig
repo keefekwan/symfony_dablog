@@ -6,7 +6,7 @@
     </header>
     <p class="tags">
         {% for tag, weight in tags %}
-            <span class="weight-{{ weight }}">{{ tag }}</span>
+            <span class="weight-{{ weight }}"><a href="{{ path('kk_blog_tags', {'tag': tag }) }}">{{ tag }}</a></span>
         {% else %}
             <p>There are no tags</p>
         {% endfor %}

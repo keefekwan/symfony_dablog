@@ -60,3 +60,7 @@ kk_blog_sidebar:
     defaults: { _controller:KKBlogBundle:Blog:sidebar }
     requirements:
         _method:  GET
+
+kk_blog_tags:
+    path: /tag/{tag}
+    defaults: { _controller:KKBlogBundle:Page:tag }

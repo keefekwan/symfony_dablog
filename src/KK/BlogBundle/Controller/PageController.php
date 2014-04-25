@@ -39,4 +39,15 @@ class PageController extends Controller
         ));
     }
 
+    public function tagAction($tag = null)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $blogs = $em->getRepository('KKBlogBundle:Blog')
+            ->getPostsByTags($tag);
+
+        return $this->render('KKBlogBundle:Page:tag.html.twig', array(
+            'blogs' => $blogs,
+        ));
+    }
 }

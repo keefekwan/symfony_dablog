@@ -351,4 +351,9 @@ class Blog
             unlink($file);
         }
     }
+
+    public function getTagsArray()
+    {
+        return explode(', ', $this->tags);
+    }
 }

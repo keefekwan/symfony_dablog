@@ -1,4 +1,4 @@
-{# src/KK/BlogBundle/Resources/views/Page/index.html.twig #}
+{# src/KK/BlogBundle/Resources/views/Page/tag.html.twig #}
 {% extends 'KKBlogBundle::layout.html.twig' %}
 
 {% block body %}
@@ -20,7 +20,7 @@
                 <p>Posted by <span class="highlight">{{blog.author}}</span> at {{ blog.created|date('h:iA') }}</p>
                 Tags:
                 {%  for tag in blog.tagsArray %}
-                <span class="highlight"><a href="{{ path('kk_blog_tags', { 'tag': tag }) }}">{{ tag }}</a></span>
+                    <span class="highlight"><a href="{{ path('kk_blog_tags', { 'tag': tag }) }}">{{ tag }}</a></span>
                 {%  endfor %}
             </footer>
         </article>
